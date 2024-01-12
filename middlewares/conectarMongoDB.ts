@@ -17,7 +17,7 @@ export const conectarMongoDB = (handler : NextApiHandler) =>
 
         //se a env estiver vazia aborta o uso do sistema e avisa o programador
         if(!DB_CONEXAO_STRING) {
-            return res.status(500).json ({ erro : 'ENV de configuracao do banco, nao informando'});
+            return res.status(500).json ({ erro : 'ENV de configuracao do banco, nao informado'});
         }
 
         mongoose.connection.on('connected', () => console.log('Banco de dados conectado'));
